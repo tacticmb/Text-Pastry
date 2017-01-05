@@ -42,7 +42,7 @@
     "command": "text_pastry_show_command_line",
     "args": {"text": "reduce "}
 }, {
-    "caption": "Text Pastry: Filter selection",
+    "caption": "Text Pastry: Filter selection Test GIT Push 2",
     "command": "text_pastry_show_command_line",
     "args": {"text": "filter "}
 }, {
