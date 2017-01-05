@@ -811,6 +811,15 @@ class TextPastryRangeCommand(sublime_plugin.TextCommand):
         else:
             return just(s, padding, fillchar)
 
+class TextPastryPythonCommand(sublime_plugin.TextCommand):
+    def run(self, edit, start=0, stop=None, step=1, padding=1, fillchar='0', justify=None,
+            align=None, prefix=None, suffix=None, repeat_increment=None, loop=None, **kwargs):
+        import spdb ; spdb.start()
+        
+    def is_enabled(self):
+        return len(self.view.sel()) == 1
+
+
 
 class TextPastryRedoCommand(sublime_plugin.WindowCommand):
     def run(self):
@@ -996,7 +1005,6 @@ class TextPastryDateRangeCommand(sublime_plugin.TextCommand):
                 years -= 1
                 months = 12
             return self.add_years(d, years).replace(day = 1).replace(month = months) - datetime.timedelta(days = 1)
-
 
 class TextPastryAutoStepCommand(sublime_plugin.TextCommand):
     def run(self, edit, text=None, step_size=None, repeat=None):
