@@ -414,7 +414,7 @@ class TextPastrySelectionFilter(TextPastrySelectionCommand):
     """
     Find in selection
     """
-    label = 'Filter Selection'
+    label = 'Filter Selection Test GIT Push'
     context = 'selection'
     keep = True
 class TextPastrySelectionFind(TextPastrySelectionCommand):
